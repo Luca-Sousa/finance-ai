@@ -11,13 +11,16 @@ const TransactionsPage = async () => {
     <div className="space-y-6 p-6">
       <div className="flex w-full items-center justify-between">
         <h1 className="text-2xl font-bold">Transações</h1>
-        <Button className="rounded-full">
+        <Button className="rounded-full font-bold">
           Adicionar Transação
           <ArrowDownUpIcon />
         </Button>
       </div>
 
-      <DataTable columns={transactionColumns} data={transactions} />
+      <DataTable
+        columns={transactionColumns}
+        data={JSON.parse(JSON.stringify(transactions))}
+      />
     </div>
   );
 };
