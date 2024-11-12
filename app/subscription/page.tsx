@@ -1,5 +1,7 @@
-const Subscription = () => {
-  return <h1>Subscription Page</h1>;
+import Navbar from "../_components/navbar";
+
+const SubscriptionPage = () => {
+  return <Navbar />;
 };
 
-export default Subscription;
+export default SubscriptionPage;
