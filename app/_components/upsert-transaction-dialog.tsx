@@ -41,6 +41,7 @@ import {
 } from "../_constants/transactions";
 import { DatePicker } from "./ui/date-picker";
 import { upsertTransaction } from "../_actions/upsert-transaction";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, {
@@ -99,8 +100,15 @@ const UpsertTransactionDialog = ({
       await upsertTransaction({ ...data, id: transactionId });
       setIsOpen(false);
       form.reset();
+
+      toast.success(
+        `Transação ${transactionId ? "atualizada" : "adicionada"}  com sucesso!`,
+      );
     } catch (error) {
       console.error(error);
+      toast.error(
+        `Ocorreu um erro ao tentar ${transactionId ? "atualizar" : "adicionar"} a transação!`,
+      );
     }
   };
 

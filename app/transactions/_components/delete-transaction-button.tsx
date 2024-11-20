@@ -1,5 +1,6 @@
 import {
   AlertDialog,
+  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
@@ -51,11 +52,11 @@ const DeleteTransactionButton = ({
         </AlertDialogHeader>
 
         <AlertDialogFooter>
-          <AlertDialogCancel asChild>
-            <Button variant="ghost">Cancelar</Button>
-          </AlertDialogCancel>
+          <AlertDialogCancel>Cancelar</AlertDialogCancel>
 
-          <Button onClick={handleConfirmDeleteClick}>Confirmar</Button>
+          <AlertDialogAction onClick={handleConfirmDeleteClick}>
+            Confirmar
+          </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
