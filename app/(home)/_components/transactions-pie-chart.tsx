@@ -32,13 +32,13 @@ const chartConfig = {
 interface TransactionsPieChartProps {
   typesPercentage: TransactionPercentagePerType;
   depositsTotal: number;
-  investimentsTotal: number;
+  investmentsTotal: number;
   expensesTotal: number;
 }
 
 const TransactionsPieChart = ({
   depositsTotal,
-  investimentsTotal,
+  investmentsTotal,
   expensesTotal,
   typesPercentage,
 }: TransactionsPieChartProps) => {
@@ -55,7 +55,7 @@ const TransactionsPieChart = ({
     },
     {
       type: TransactionType.INVESTMENT,
-      amount: investimentsTotal,
+      amount: investmentsTotal,
       fill: "#FFFFFF",
     },
   ];

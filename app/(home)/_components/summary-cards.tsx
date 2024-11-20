@@ -9,7 +9,7 @@ import SummaryCard from "./summary-card";
 interface SummaryCards {
   month: string;
   balance: number;
-  investimentsTotal: number;
+  investmentsTotal: number;
   depositsTotal: number;
   expensesTotal: number;
   userCanAddTransaction?: boolean;
@@ -17,7 +17,7 @@ interface SummaryCards {
 
 const SummaryCards = ({
   balance,
-  investimentsTotal,
+  investmentsTotal,
   depositsTotal,
   expensesTotal,
   userCanAddTransaction,
@@ -36,7 +36,7 @@ const SummaryCards = ({
         <SummaryCard
           icon={<PiggyBank size={16} />}
           title="Investido"
-          amount={investimentsTotal}
+          amount={investmentsTotal}
         />
 
         <SummaryCard
@@ -44,6 +44,7 @@ const SummaryCards = ({
           title="Receita"
           amount={depositsTotal}
         />
+
         <SummaryCard
           icon={<TrendingDownIcon size={16} className="text-destructive" />}
           title="Despesas"

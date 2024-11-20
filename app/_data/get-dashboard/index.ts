@@ -26,7 +26,7 @@ export const getDashboard = async (month: string) => {
     )?._sum?.amount,
   );
 
-  const investimentsTotal = Number(
+  const investmentsTotal = Number(
     (
       await db.transaction.aggregate({
         where: { ...where, type: "INVESTMENT" },
@@ -44,9 +44,9 @@ export const getDashboard = async (month: string) => {
     )?._sum?.amount,
   );
 
-  const balance = depositsTotal - investimentsTotal - expensesTotal;
+  const balance = depositsTotal - investmentsTotal - expensesTotal;
 
-  const transactionTotal = Number(
+  const transactionsTotal = Number(
     (
       await db.transaction.aggregate({
         where,
@@ -57,13 +57,13 @@ export const getDashboard = async (month: string) => {
 
   const typesPercentage: TransactionPercentagePerType = {
     [TransactionType.DEPOSIT]: Math.round(
-      (Number(depositsTotal || 0) / Number(transactionTotal)) * 100,
+      (Number(depositsTotal || 0) / Number(transactionsTotal)) * 100,
     ),
     [TransactionType.EXPENSE]: Math.round(
-      (Number(expensesTotal || 0) / Number(transactionTotal)) * 100,
+      (Number(expensesTotal || 0) / Number(transactionsTotal)) * 100,
     ),
     [TransactionType.INVESTMENT]: Math.round(
-      (Number(investimentsTotal || 0) / Number(transactionTotal)) * 100,
+      (Number(investmentsTotal || 0) / Number(transactionsTotal)) * 100,
     ),
   };
 
@@ -93,10 +93,10 @@ export const getDashboard = async (month: string) => {
   });
 
   return {
-    depositsTotal,
-    investimentsTotal,
-    expensesTotal,
     balance,
+    depositsTotal,
+    investmentsTotal,
+    expensesTotal,
     typesPercentage,
     totalExpensePerCategory,
     lastTransactions,
