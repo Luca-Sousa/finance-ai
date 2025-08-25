@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💰 Finance AI
 
-## Getting Started
+Uma aplicação web de gestão financeira pessoal que oferece controle completo sobre receitas, gastos e investimentos através de uma interface moderna e intuitiva.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-14.2.16-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
+![Prisma](https://img.shields.io/badge/Prisma-5.21.1-2D3748?style=for-the-badge&logo=prisma)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Latest-316192?style=for-the-badge&logo=postgresql)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## � Sobre o Projeto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O Finance AI é uma plataforma completa de gestão financeira que permite aos usuários monitorar suas finanças pessoais de forma organizada e visual. A aplicação oferece análises detalhadas dos gastos por categoria, acompanhamento de receitas e investimentos, além de gráficos interativos para melhor compreensão dos hábitos financeiros.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Principais Recursos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📊 Dashboard Analítico
+- Visão geral das finanças mensais com cards de resumo
+- Gráficos de pizza para distribuição de gastos por categoria
+- Análise de gastos por categoria com percentuais
+- Histórico das últimas transações
+- Filtros por período específico
 
-## Learn More
+### � Gestão de Transações
+- Sistema completo de CRUD para transações financeiras
+- Categorização em: Moradia, Transporte, Alimentação, Entretenimento, Saúde, Utilidades, Salário, Educação e Outros
+- Suporte a múltiplos métodos de pagamento: Cartão de Crédito/Débito, PIX, Transferência Bancária, Boleto e Dinheiro
+- Classificação por tipo: Receitas, Gastos e Investimentos
+- Interface de tabela com paginação e ordenação
 
-To learn more about Next.js, take a look at the following resources:
+### � Sistema de Autenticação
+- Login/cadastro integrado com Clerk
+- Proteção de rotas e sessões seguras
+- Interface de tema escuro
+- Controle de acesso baseado em usuário
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### � Modelo Freemium
+- **Plano Gratuito**: Limite de 10 transações por mês
+- **Plano Premium**: Transações ilimitadas
+- Integração com Stripe para processamento de pagamentos
+- Sistema de webhooks para atualização automática de status
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Stack Tecnológica
 
-## Deploy on Vercel
+**Frontend:**
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Radix UI (componentes)
+- React Hook Form + Zod
+- Recharts (gráficos)
+- Lucide React (ícones)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Backend:**
+- Next.js Server Actions
+- Prisma ORM
+- PostgreSQL
+- Middleware de autenticação
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Serviços:**
+- Clerk (autenticação)
+- Stripe (pagamentos)
+- Docker (desenvolvimento)
+
+## 🎯 Arquitetura
+
+O projeto utiliza a arquitetura App Router do Next.js 14, organizando as funcionalidades em:
+
+- **Dashboard Principal** (`(home)`): Visualizações e análises financeiras
+- **Transações** (`transactions`): CRUD completo de movimentações
+- **Assinatura** (`subscription`): Gerenciamento de planos premium
+- **API Routes**: Webhooks do Stripe e endpoints necessários
+- **Componentes Reutilizáveis**: UI components baseados em Radix UI
+
+O banco de dados é modelado com Prisma, utilizando PostgreSQL para persistência dos dados de transações e relacionamentos com usuários autenticados via Clerk.
+
+---
+
+**Desenvolvido por:** [Lucas Sousa](https://github.com/Luca-Sousa)
