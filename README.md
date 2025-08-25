@@ -7,33 +7,33 @@ Uma aplicação web de gestão financeira pessoal que oferece controle completo 
 ![Prisma](https://img.shields.io/badge/Prisma-5.21.1-2D3748?style=for-the-badge&logo=prisma)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Latest-316192?style=for-the-badge&logo=postgresql)
 
-## � Sobre o Projeto
+## Sobre o Projeto
 
 O Finance AI é uma plataforma completa de gestão financeira que permite aos usuários monitorar suas finanças pessoais de forma organizada e visual. A aplicação oferece análises detalhadas dos gastos por categoria, acompanhamento de receitas e investimentos, além de gráficos interativos para melhor compreensão dos hábitos financeiros.
 
 ## ✨ Principais Recursos
 
-### 📊 Dashboard Analítico
+### Dashboard Analítico
 - Visão geral das finanças mensais com cards de resumo
 - Gráficos de pizza para distribuição de gastos por categoria
 - Análise de gastos por categoria com percentuais
 - Histórico das últimas transações
 - Filtros por período específico
 
-### � Gestão de Transações
+### Gestão de Transações
 - Sistema completo de CRUD para transações financeiras
 - Categorização em: Moradia, Transporte, Alimentação, Entretenimento, Saúde, Utilidades, Salário, Educação e Outros
 - Suporte a múltiplos métodos de pagamento: Cartão de Crédito/Débito, PIX, Transferência Bancária, Boleto e Dinheiro
 - Classificação por tipo: Receitas, Gastos e Investimentos
 - Interface de tabela com paginação e ordenação
 
-### � Sistema de Autenticação
+### Sistema de Autenticação
 - Login/cadastro integrado com Clerk
 - Proteção de rotas e sessões seguras
 - Interface de tema escuro
 - Controle de acesso baseado em usuário
 
-### � Modelo Freemium
+### Modelo Freemium
 - **Plano Gratuito**: Limite de 10 transações por mês
 - **Plano Premium**: Transações ilimitadas
 - Integração com Stripe para processamento de pagamentos
